@@ -10,6 +10,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { FormsModule } from '@angular/forms';
 
@@ -26,7 +28,9 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    FormsModule
+    MatIconModule,
+    FormsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

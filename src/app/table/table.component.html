@@ -17,13 +17,18 @@
     </form>
   </div>
 
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
-      <th mat-header-cell *matHeaderCellDef class="capitalize">{{column}}</th>
-      <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"
+  cdkDropList cdkDropListLockAxis="x" cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+      <ng-container *ngFor="let column of displayedColumns; let i = index" [matColumnDef]="column">
+        <th mat-header-cell *matHeaderCellDef class="capitalize" cdkDrag cdkDragBoundary=".header-row">
+          <div class="drag-container" cdkDragHandle>
+            <!-- <mat-icon cdkDragHandle class="drag-handle">drag_indicator</mat-icon> -->
+          </div>
+          <span>{{column}}</span>
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+      </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" class="header-row"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div>
