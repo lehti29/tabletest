@@ -1,8 +1,17 @@
-table {
-  width: 100%;
-}
+div.container {
+  padding: 5%;
 
-th {
-  resize: horizontal;
-  overflow: hidden;
+  .checkbox-container, table {
+    margin: auto;
+    width: 80%;
+  }
+
+  th {
+    resize: horizontal;
+    overflow: hidden;
+  }
+
+  .capitalize {
+    text-transform: capitalize;
+  }
 }
