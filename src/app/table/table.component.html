@@ -1,10 +1,19 @@
 <div class="container">
+  <div class="info">
+    <p>A test project for Angular Material Data Table. Current features:</p>
+    <ul>
+      <li>Resizeable column width</li>
+      <li>Show/hide columns</li>
+      <li>Add new custom column (each element in the table will be assigned a random value between 0-99 in that column)</li>
+    </ul>
+  </div>
   <div class="checkbox-container">
     <h2>
       Columns
     </h2>
     <div *ngFor="let column of allColumnsInfo">
-      <mat-checkbox [checked]="column.isVisible" (change)="toggleColumn($event)" [value]="column.key" class="capitalize">
+      <mat-checkbox [checked]="column.isVisible" (change)="toggleColumn($event)" [value]="column.key"
+        class="capitalize">
         {{column.key}}
       </mat-checkbox>
     </div>
