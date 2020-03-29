@@ -25,6 +25,10 @@ div.container {
   .capitalize {
     text-transform: capitalize;
   }
+
+  tr.mat-header-row {
+    height: 3em;
+  }
 }
 
 .cdk-drag-preview {
