@@ -32,7 +32,6 @@
       <ng-container *ngFor="let column of displayedColumns; let i = index" [matColumnDef]="column">
         <th mat-header-cell *matHeaderCellDef class="capitalize" cdkDrag cdkDragBoundary=".header-row">
           <div class="drag-container" cdkDragHandle>
-            <!-- <mat-icon cdkDragHandle class="drag-handle">drag_indicator</mat-icon> -->
           </div>
           <span class="column-name">{{column}}</span>
         </th>
